@@ -25,7 +25,12 @@
     {
       "locator": "https://github.com/VersoSolutions/CordovaClipboard",
       "id": "com.verso.cordova.clipboard"
-    }
+    },
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [
     "ios",
