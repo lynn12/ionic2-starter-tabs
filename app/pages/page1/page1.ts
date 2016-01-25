@@ -1,6 +1,6 @@
 import {Page} from 'ionic-framework/ionic';
 import {NavController, NavParams} from 'ionic-framework/ionic';
-import {userView} from 'view/view';
+import {userView} from '../../pages/page1/view/view';
 import {User} from '../../vo/User';
 
 @Page({

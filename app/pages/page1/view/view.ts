@@ -8,8 +8,7 @@ import {User} from '../../../vo/User';
 @Page({
     templateUrl: 'build/pages/page1/view/view.html',
 })
-export  class  userView() {
-    public  var user:User;
+export  class  userView {
     constructor(nav: NavController, params:NavParams) {
         this.user = params.data;
     }
