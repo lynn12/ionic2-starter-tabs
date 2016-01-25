@@ -6,9 +6,22 @@
         <ion-card-header>
             {{user.name}}
         </ion-card-header>
-        <ion-card-content>
-            {{user.des}}--{{user.age}}岁
+        <ion-card-content (click)="goToDetailPage()">
+            {{user.des}}
         </ion-card-content>
+        <ion-item>
+            <button primary clear item-left>
+                <icon thumbs-up></icon>
+                <div>{{user.age}}岁</div>
+            </button>
+            <button primary clear item-left>
+                <icon text></icon>
+                <div>{{user.age}}岁</div>
+            </button>
+            <ion-note item-right>
+                {{user.age}}岁
+            </ion-note>
+        </ion-item>
     </ion-card>
 
 </ion-content>
