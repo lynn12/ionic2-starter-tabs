@@ -1,12 +1,12 @@
 <ion-navbar *navbar>
-  <ion-title>保养计划</ion-title>
+  <ion-title>TAB1</ion-title>
 </ion-navbar>
 <ion-content class="has-header components-demo cards-bg">
     <ion-card *ngFor="#user of users">
         <ion-card-header>
             {{user.name}}
         </ion-card-header>
-        <ion-card-content (click)="goToDetailPage()">
+        <ion-card-content (click)="goToDetailPage(user.id)">
             {{user.des}}
         </ion-card-content>
         <ion-item>

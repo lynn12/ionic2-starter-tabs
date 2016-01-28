@@ -1,38 +1,40 @@
-import {Page} from 'ionic-framework/ionic';
-import {NavController, NavParams} from 'ionic-framework/ionic';
-import {userView} from '../../pages/page1/view/view';
+import {Inject} from 'angular2/core';
+import {Page,NavController} from 'ionic-framework/ionic';
+import {UserView} from '../../pages/page1/view/view';
 import {User} from '../../vo/User';
 
 @Page({
   templateUrl: 'build/pages/page1/page1.html',
 })
 export class Page1 {
-  public  users;
-  public nav:NavController;
-  constructor(nav: NavController) {
-    this.users = users;
-    this.nav= nav;
+  users;any;
+  nav: any;
+  constructor(@Inject(NavController) nav) {
+    this.nav = nav;
+    this.users = usersData;
   }
 
   goToDetailPage(id) {
     var  user = this.getUser(id);
-    this.nav.push(userView,user);
+    this.nav.push(UserView, user);
 
   }
 
   getUser(id:number) {
-    var userTem:User ;
-    for (var user in  users) {
-      if (user.id==id) {
-        userTem=user;
+
+    var userResult:User ;
+    var users  = usersData;
+    for (var i = 0;i < users.length; i++) {
+      if (users[i].id==id) {
+        userResult=users[i];
         break;
       }
     }
-    return userTem;
+    return userResult;
   }
 }
 
-var users: User[] = [
+var usersData: User[] = [
   { "id":1, "name": "张三1" ,"des":"我是张三1","age":"1"},
   { "id":2, "name": "张三1" ,"des":"我是张三1","age":"1"},
   { "id":3, "name": "张三1" ,"des":"我是张三1","age":"1"},
