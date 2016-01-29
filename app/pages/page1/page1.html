@@ -1,5 +1,10 @@
 <ion-navbar *navbar>
-  <ion-title>TAB1</ion-title>
+    <ion-title>
+        所有信息
+    </ion-title>
+    <ion-buttons end>
+        <button (click)="applyFilters()">添加</button>
+    </ion-buttons>
 </ion-navbar>
 <ion-content class="has-header components-demo cards-bg">
     <ion-card *ngFor="#user of users">

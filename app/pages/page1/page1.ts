@@ -35,8 +35,8 @@ export class Page1 {
 }
 
 var usersData: User[] = [
-  { "id":1, "name": "张三1" ,"des":"我是张三1","age":"1"},
-  { "id":2, "name": "张三1" ,"des":"我是张三1","age":"1"},
+  { "id":1, "name": "张san " ,"des":"我是zhangsan","age":"1"},
+  { "id":2, "name": "zhangsna " ,"des":"我是张三1","age":"1"},
   { "id":3, "name": "张三1" ,"des":"我是张三1","age":"1"},
   { "id":4, "name": "张三1" ,"des":"我是张三1","age":"1"},
   { "id":5, "name": "张三1" ,"des":"我是张三1","age":"1"},

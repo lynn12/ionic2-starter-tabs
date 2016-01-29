@@ -1,18 +1,24 @@
-
-<ion-navbar *navbar>
-    <ion-title>Session</ion-title>
+<ion-navbar *navbar  class="show-navbar android-attr">
+    <ion-title>
+        详细信息
+    </ion-title>
+    <ion-buttons end>
+        <button (click)="toEdit(user.id)">修改</button>
+    </ion-buttons>
 </ion-navbar>
 
-<ion-content padding>
-    <h1>{{user.id}}</h1>
-
-    <p>
-        {{user.desc}}
-    </p>
-
-    <p>{{user.name}}</p>
-
+<ion-content class="has-header demo-list-icons">
+    <ion-list>
+        <ion-item>{{user.id}}</ion-item>
+        <ion-item>{{user.name}}</ion-item>
+        <ion-item>{{user.age}}</ion-item>
+        <ion-item>{{user.des}}</ion-item>
+    </ion-list>
 </ion-content>
+
+
+
+
 
 
 

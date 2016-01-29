@@ -13,7 +13,6 @@ export  class  UserView {
     user:User;
     constructor(@Inject(NavController)nav,@Inject(NavParams) params) {
         this.user = params.data;
-
     }
 
 }
