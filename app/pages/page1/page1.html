@@ -11,7 +11,7 @@
         <ion-card-header>
             {{user.name}}
         </ion-card-header>
-        <ion-card-content (click)="goToDetailPage(user.id)">
+        <ion-card-content (click)="userController.toDetail(user.id)">
             {{user.des}}
         </ion-card-content>
         <ion-item>

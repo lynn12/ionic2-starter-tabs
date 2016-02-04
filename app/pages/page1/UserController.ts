@@ -1,18 +1,33 @@
 /**
  * Created by Administrator on 2016/1/29.
  */
-import {Component} from "angular2/core";
+import {Component,Inject} from 'angular2/core';
 import {NavController} from "ionic-framework/ionic";
+import {UserView} from '../../pages/page1/view/view';
+import {UserEdit} from '../../pages/page1/edit/edit';
 import {User} from '../../vo/User';
-@Component()
-class  UserController {
+import {UserService} from  '../../pages/page1/UserService';
+
+@
+export  class  UserController {
     nav:NavController;
     user:User;
-    constructor(navController:NavController) {
+    userService;UserService;
+    constructor(@Inject(NavController) navController) {
+        alert(navController);
         this.nav = navController;
     }
-    goEdit(id) {
-        this.nav.push(edit,user);
+    toEdit(id) {
+        var  user = userService.getUser(id);
+        this.nav.push(UserEdit,user);
+    }
+
+    toDetail(id) {
+        var  user = userService.getUser(id);
+        this.nav.push(UserView, user);
+
     }
 
 }
+
+
