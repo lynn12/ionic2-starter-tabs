@@ -9,7 +9,7 @@ export class Page1 {
   users;any;
   nav: any;
   userService = new UserService();
-  userController = new UserController;
+  userController = new UserController();
   constructor(@Inject(NavController) nav) {
     this.nav = nav;
     this.users = this.userService.getAllUser();

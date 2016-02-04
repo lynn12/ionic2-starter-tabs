@@ -7,23 +7,20 @@ import {UserView} from '../../pages/page1/view/view';
 import {UserEdit} from '../../pages/page1/edit/edit';
 import {User} from '../../vo/User';
 import {UserService} from  '../../pages/page1/UserService';
-
-@
 export  class  UserController {
-    nav:NavController;
+    nav = new NavController();
     user:User;
-    userService;UserService;
+    userService = new UserService();
     constructor(@Inject(NavController) navController) {
-        alert(navController);
         this.nav = navController;
     }
     toEdit(id) {
-        var  user = userService.getUser(id);
+        var  user = this.userService.getUser(id);
         this.nav.push(UserEdit,user);
     }
 
     toDetail(id) {
-        var  user = userService.getUser(id);
+        var  user = this.userService.getUser(id);
         this.nav.push(UserView, user);
 
     }
